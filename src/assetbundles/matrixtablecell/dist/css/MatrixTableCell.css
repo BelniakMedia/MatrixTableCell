@@ -1,0 +1,58 @@
+/**
+ * Matrix Table Cell plugin for Craft CMS
+ *
+ * MatrixTableCell Field CSS
+ *
+ * @author    Belniak Media, Inc.
+ * @copyright Copyright (c) 2017 Belniak Media, Inc.
+ * @link      http://www.belniakmedia.com
+ * @package   MatrixTableCell
+ * @since     1.0.0
+ */
+
+tr.data-row td textarea,
+tr.data-row td select {
+    width: 100%;
+    outline: none;
+    border: 0;
+}
+
+table.matrixTableCellRow th.align,
+tr.data-row td.align {
+    width: 5%;
+    min-width: 100px;
+}
+table.matrixTableCellRow th.class,
+tr.data-row td.class {
+    width: 5%;
+    min-width: 120px;
+}
+
+div.matrixTableCellRow.addrow { background: #fff !important; }
+
+
+tr.data-row.draghelper td:not(:first-child) {
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+tr.data-row.draghelper td:not(.textual) {
+    padding: 4px 10px;
+}
+
+td.data-row.draghelper td { background: #fff!important; }
+
+tr.data-row.draghelper textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 7px 10px;
+    background: transparent;
+    overflow: hidden;
+}
+
+tr.data-row.datahelper td.action {
+    padding: 4px 7px;
+    background: #ebedef;
+    border-left: 0;
+    width: .01%;
+}

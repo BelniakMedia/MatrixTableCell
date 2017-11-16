@@ -1,0 +1,47 @@
+{
+    "name": "BelniakMedia/MatrixTableCell",
+    "description": "Table Cell FieldType for CraftCMS 3+",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "matrix table cell"
+    ],
+    "support": {
+        "docs": "https://github.com/BelniakMedia/MatrixTableCell",
+        "issues": "https://github.com/BelniakMedia/MatrixTableCell/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Belniak Media, Inc.",
+            "homepage": "http://www.belniakmedia.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.23"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "BelniakMedia\\MatrixTableCell\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Matrix Table Cell",
+        "handle": "matrix-table-cell",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://github.com/BelniakMedia/MatrixTableCell/blob/master/README.m://github.com/BelniakMedia/MatrixTableCell/blob/master/CHANGELOG.md",
+        "class": "BelniakMedia\\MatrixTableCell\\MatrixTableCell"
+    }
+}

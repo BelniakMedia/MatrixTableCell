@@ -1,0 +1,45 @@
+{#
+/**
+ * Matrix Table Cell plugin for Craft CMS 3.x
+ *
+ * MatrixTableCell Field Input
+ *
+ * @author    Belniak Media, Inc.
+ * @copyright Copyright (c) 2017 Belniak Media, Inc.
+ * @link      http://www.belniakmedia.com
+ * @package   MatrixTableCell
+ * @since     1.0.0
+ */
+#}
+
+<table id="{{ id }}" class="matrixTableCellRow shadow-box editable" width="100%">
+    <thead>
+    <tr>
+        <th class="header">Cell Data</th>
+        <th class="header class" width="5%">Class</th>
+        <th class="header colspan" width="5%">Colspan</th>
+        <th class="header colspan" width="5%">Rowspan</th>
+        <th class="header align" width="5%">Align</th>
+        <th class="header buttons" colspan="2">&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody class="data-rows">
+    {% for row in value %}
+        {% set index = loop.index - 1 %}
+    <tr class="data-row" data-index="{{ index }}">
+        <td><textarea rows="1" style="min-height: 33px;" class="data nicetext fullwidth" name="{{ name }}[{{ index }}][data]">{{ row.data is defined ? row.data }}</textarea></td>
+        <td><textarea rows="1" style="min-height: 33px;" class="class" name="{{ name }}[{{ index }}][class]">{{ row.class is defined ? row.class }}</textarea></td>
+        <td><textarea rows="1" style="min-height: 33px;" class="colspan" name="{{ name }}[{{ index }}][colspan]">{{ row.colspan is defined ? row.colspan }}</textarea></td>
+        <td><textarea rows="1" style="min-height: 33px;" class="colspan" name="{{ name }}[{{ index }}][rowspan]">{{ row.rowspan is defined ? row.rowspan }}</textarea></td>
+        <td><select name="{{ name }}[{{ index }}][align]">
+                <option value="left"{%- if row.align is defined and row.align == 'left' %} selected{% endif %}>Left</option>
+                <option value="center"{%- if row.align is defined and row.align == 'center' %} selected{% endif %}>Center</option>
+                <option value="right"{%- if row.align is defined and row.align == 'right' %} selected{% endif %}>Right</option>
+            </select></td>
+        <td class="thin action"><a class="move icon" title="Reorder"></a></td>
+        <td class="buttons thin action"><a href="javascript:;" class="remrow delete icon" title="Delete Cell"></a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div id="{{ id }}-field-addbutton" class="matrixTableCellRow addrow btn add icon">Add a Cell</div>
