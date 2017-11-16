@@ -1,5 +1,5 @@
 {
-    "name": "BelniakMedia/MatrixTableCell",
+    "name": "belniakmedia/matrix-table-cell",
     "description": "Table Cell FieldType for CraftCMS 3+",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -41,7 +41,7 @@
         "schemaVersion": "1.0.0",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://github.com/BelniakMedia/MatrixTableCell/blob/master/README.m://github.com/BelniakMedia/MatrixTableCell/blob/master/CHANGELOG.md",
+        "changelogUrl": "https://github.com/BelniakMedia/MatrixTableCell/blob/master/CHANGELOG.md",
         "class": "BelniakMedia\\MatrixTableCell\\MatrixTableCell"
     }
 }
